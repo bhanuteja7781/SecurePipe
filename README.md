@@ -1,141 +1,73 @@
-# 🚀 Secure File Scan DevOps
+# 🚀 Tutor Booking DevOps Platform
 
-A cloud-native, security-focused file upload system built to demonstrate real-world DevOps practices including containerization, CI/CD automation, and Kubernetes orchestration.
+This repository demonstrates the transformation of a tutor booking application into a cloud-native, scalable system using modern DevOps practices.
+
+> Note: The core application logic is developed separately. This repository focuses on containerization, CI/CD automation, and orchestration.
 
 ---
 
 ## 📖 Overview
 
-This project addresses a common security gap in web applications: unsafe file uploads. It provides a system where uploaded files are processed and scanned in an isolated environment before being accepted.
-
-Beyond functionality, the primary goal is to showcase how modern DevOps workflows are applied to build, test, and manage scalable applications.
+Finding tutors on demand is challenging, and systems often fail to scale under real-time demand. This project focuses on how such an application can be deployed, managed, and scaled efficiently using DevOps methodologies.
 
 ---
 
 ## 🎯 Objectives
 
-- Build a secure file upload system  
-- Apply containerization using Docker  
-- Implement CI/CD pipelines for automation  
-- Orchestrate services using Kubernetes  
-- Maintain structured documentation and progress tracking  
+- Containerize the application using Docker  
+- Implement CI/CD pipelines  
+- Deploy using Kubernetes  
+- Demonstrate scalability  
+- Document DevOps workflows  
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ Architecture
 
-```
-Client → Frontend → Backend API → Database
-                         ↓
-                  Scanner Service
-```
+User → Frontend → Backend API → Database  
+                         ↓  
+                Notification Service  
 
 ---
 
-## 🧰 Tech Stack
+## 🐳 Docker Setup
 
-- Frontend: React / Blade  
-- Backend: Laravel (PHP)  
-- Database: MySQL  
-- Containerization: Docker  
-- CI/CD: GitHub Actions  
-- Orchestration: Kubernetes (Minikube)  
-
----
-
-## 🐳 Getting Started (Docker)
-
-### Prerequisites
-- Docker  
-- Docker Compose  
-
-### Run the Application
-
-```
+\`\`\`bash
 docker-compose up --build
-```
+\`\`\`
 
 ---
 
 ## 🔁 CI/CD Pipeline
 
-Implemented using GitHub Actions.
-
-### Workflow Includes:
-- Dependency installation  
-- Code validation / basic testing  
-- Docker image build  
-- (Optional) Image push to registry  
-- Deployment simulation  
+- Install dependencies  
+- Run tests  
+- Build Docker images  
+- Simulate deployment  
 
 ---
 
-## ☸️ Kubernetes Deployment (Local)
+## ☸️ Kubernetes
 
-### Setup
-
-```
+\`\`\`bash
 minikube start
 kubectl apply -f k8s/
-```
-
-### Features Demonstrated
-- Deployments and Services  
-- Pod scaling  
-- Rolling updates  
+\`\`\`
 
 ---
 
 ## 📂 Project Structure
 
-```
-secure-file-scan-devops/
+\`\`\`
+tutor-booking-devops-platform/
 │
-├── backend/
-├── frontend/
-├── scanner/
+├── app-source/
+├── docker/
 ├── docker-compose.yml
 ├── k8s/
 ├── .github/workflows/
 └── docs/
-    ├── progress.md
-    └── notes/
-```
-
----
-
-## 📈 Progress Tracking
-
-All development progress is documented in:
-
-```
-docs/progress.md
-```
-
----
-
-## 🔐 Security Design
-
-- File scanning handled in isolated container  
-- Service-level separation  
-- Controlled file handling  
-- Minimal exposure between components  
-
----
-
-## 🚀 Future Enhancements
-
-- Integration with real vulnerability scanning tools  
-- Cloud deployment (AWS / GCP free tier)  
-- Authentication and authorization system  
-- Monitoring and logging  
-- Improved UI/UX  
-
----
-
-## 🤝 Contribution
-
-This project is primarily for learning and demonstration. Contributions are welcome.
+\`\`\`
 
 ---
 
